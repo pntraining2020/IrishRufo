@@ -60,11 +60,11 @@ Copyright ValyTGV
 <body>
 
 <hr>
-    <form action="/updateclockin">
-        <input type = submit id ='clockInbutton' class = 'button button2' value = 'clock-in'>
+    <form action="{{Route('updateclockIn'),clockIn }}">
+        <input type = submit id ='clockInbutton' class = 'button button2'>
+            clock-in
         <input id = 'clockIn' type="text" name = 'clockIn' disabled value = ''><br>
     </form>
-
     <button id = 'startbutton' class = 'button startBreak'>
         start
     </button><input id = 'start' type="text" disabled><br>

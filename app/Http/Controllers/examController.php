@@ -36,4 +36,16 @@ class examController extends Controller
         return view('clock', compact('datas'));
     }
 
+    function updatestart(Request $request){
+        $datas = DB::table('employees')->where('employeeId', $request->id);
+        $datas->startBreak = $request->start;
+        return view('clock', compact('datas'));
+    }
+
+    function updateend(Request $request){
+        $datas = DB::table('employees')->where('employeeId', $request->id);
+        $datas->endBreak = $request->end;
+        return view('clock', compact('datas'));
+    }
+
 }
